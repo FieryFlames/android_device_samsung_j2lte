@@ -8,7 +8,7 @@
 
 set -e
 
-DEVICE=a3xelte
+DEVICE=j2lte
 VENDOR=samsung
 
 # Load extract_utils and do some sanity checks
@@ -28,7 +28,7 @@ source "${HELPER}"
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}"
 
 # Warning headers and guards
-write_headers
+write_headers "j2lte"
 
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
 

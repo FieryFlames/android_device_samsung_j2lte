@@ -17,9 +17,9 @@
 # Inherit from universal7580-common
 include device/samsung/universal7580-common/BoardConfigCommon.mk
 
-LOCAL_PATH := device/samsung/a3xelte
+LOCAL_PATH := device/samsung/j2lte
 
-TARGET_OTA_ASSERT_DEVICE := j1xlte
+TARGET_OTA_ASSERT_DEVICE := j2lte
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
@@ -47,7 +47,7 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 4970250240
 BOARD_FLASH_BLOCK_SIZE := 4096
 
 # Kernel
-TARGET_KERNEL_CONFIG := lineageos_a3xelte_defconfig
+TARGET_KERNEL_CONFIG := lineage-j2lte_defconfig
 
 # Manifest
 DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/manifest.xml
