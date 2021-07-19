@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/j2lte
+LOCAL_PATH := device/samsung/on5ltetmo
 
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
@@ -55,7 +55,7 @@ TARGET_USES_UNCOMPRESSED_KERNEL := true
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
 TARGET_KERNEL_SOURCE := kernel/samsung/exynos3475
-TARGET_KERNEL_CONFIG := lineage-j2lte_defconfig
+TARGET_KERNEL_CONFIG := lineage-on5ltetmo_defconfig
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 
 # Partitions
@@ -74,11 +74,11 @@ BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 13631488
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 15728640
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2147483648
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 4831838208
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3061841920
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 4261412864
 BOARD_FLASH_BLOCK_SIZE := 4096
 TARGET_USERIMAGES_USE_EXT4 := true
-BOARD_CACHEIMAGE_PARTITION_SIZE    := 202211328
+BOARD_CACHEIMAGE_PARTITION_SIZE    := 314572800
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE  := ext4
 # TARGET_USERIMAGES_USE_F2FS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -173,7 +173,7 @@ WITH_DEXPREOPT := true
 #RECOVERY_VARIANT := twrp
 BOARD_HAS_DOWNLOAD_MODE := true
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/ramdisk/fstab.universal3475
-TARGET_OTA_ASSERT_DEVICE := j2lte, j2ltedd, j2ltedx
+TARGET_OTA_ASSERT_DEVICE := on5ltetmo,on5lte
 
 # TWRP
 ifeq ($(RECOVERY_VARIANT),twrp)
@@ -190,10 +190,6 @@ TW_NO_EXFAT_FUSE := true
 TW_EXCLUDE_SUPERSU := true
 endif
 
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_j2lte
-TARGET_RECOVERY_DEVICE_MODULES := libinit_j2lte
-
 # Seccomp filters
 BOARD_SECCOMP_POLICY += $(LOCAL_PATH)/seccomp
 
@@ -201,4 +197,4 @@ BOARD_SECCOMP_POLICY += $(LOCAL_PATH)/seccomp
 BOARD_SEPOLICY_DIRS := $(LOCAL_PATH)/sepolicy
 
 # Inherit from the proprietary version
--include vendor/samsung/j2lte/BoardConfigVendor.mk
+-include vendor/samsung/on5ltetmo/BoardConfigVendor.mk
