@@ -111,8 +111,8 @@ PRODUCT_COPY_FILES += \
 # Properties
 -include $(LOCAL_PATH)/system_prop.mk
 
-# Inherit from universal7580-common
-$(call inherit-product, device/samsung/universal7580-common/device-common.mk)
+# Inherit from universal3475-common
+$(call inherit-product, device/samsung/universal3475-common/device-common.mk)
 
 # Call the proprietary setup
 $(call inherit-product, vendor/samsung/on5ltetmo/on5ltetmo-vendor.mk)

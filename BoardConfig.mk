@@ -14,8 +14,8 @@
 # limitations under the License.
 #
 
-# Inherit from universal7580-common
-include device/samsung/universal7580-common/BoardConfigCommon.mk
+# Inherit from universal3475-common
+include device/samsung/universal3475-common/BoardConfigCommon.mk
 
 LOCAL_PATH := device/samsung/on5ltetmo
 
